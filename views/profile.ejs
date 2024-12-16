@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templete Engines EJS</title>
+</head>
+<body>
+    <!-- Note i have done lots of mistake in tying below line sometimes brackets or ' or thoer order is changed. -->
+    <%- include('comonents/header');%>
+    <!-- if we try to get some variable in ejs we will get in <%= %>  just like in react we use `${VARIABLE_NAME}` to get variable name -->
+    <h1>Welcome <%= user.name %></h1>
+    <p><%=user.Email%></p>
+    <p><%=user.City%></p>
+    <h3>This is Templete Engine Learning.</h3>
+    <!-- the below is the way of looing in ejs -->
+    <ul>
+       <% user.Skills.forEach((item)=>{%>
+        <li><%=item%></li>
+        <%});%>
+    </ul>
+</body>
+</html>
